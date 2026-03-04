@@ -1,77 +1,135 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Map, Landmark, Shield, Crosshair } from 'lucide-react';
+import { Map, Landmark, Shield, Crosshair, Users, Car } from 'lucide-react';
 
 const features = [
     {
-        icon: <Map size={32} />,
-        title: 'Custom Maps & YMAPs',
-        description: 'Explore exclusively designed interiors, custom car dealerships, and optimized Los Santos expansions built for roleplay.',
-        color: 'text-neon-cyan',
+        icon: <Map strokeWidth={1.5} className="w-16 h-16 text-neon-cyan" />,
+        title: 'Custom Worlds',
+        description: 'Immersive YMAPs & perfectly optimized MLOs integrated into the city.',
+        label: 'MAPPING',
+        color: 'neon-cyan',
+        bgColor: 'bg-neon-cyan',
+        borderColor: 'border-neon-cyan',
+        shadowColor: 'shadow-neon-cyan',
+        // Custom rotation and translation for organic, scattered look
+        transform: 'rotate-[-2deg] translate-y-4 hover:rotate-0 hover:translate-y-0',
+        delay: 0,
     },
     {
-        icon: <Landmark size={32} />,
+        icon: <Landmark strokeWidth={1.5} className="w-16 h-16 text-maverick-red" />,
         title: 'Dynamic Economy',
-        description: 'Player-driven market with realistic inflation, crypto-trading, and deep business management systems.',
-        color: 'text-maverick-red',
+        description: 'Player-driven market, crypto-trading, and deep business management.',
+        label: 'FINANCE',
+        color: 'maverick-red',
+        bgColor: 'bg-maverick-red',
+        borderColor: 'border-maverick-red',
+        shadowColor: 'shadow-maverick-red',
+        transform: 'rotate-[3deg] -translate-y-6 hover:rotate-0 hover:translate-y-0',
+        delay: 0.1,
     },
     {
-        icon: <Shield size={32} />,
-        title: 'Active DOJ & LSPD',
-        description: 'Immersive justice system, serious RP police force, and high-stakes criminal underworld.',
-        color: 'text-white',
+        icon: <Shield strokeWidth={1.5} className="w-16 h-16 text-white" />,
+        title: 'LSPD & DOJ',
+        description: 'Highly immersive justice system and a serious RP police force.',
+        label: 'GOVERNMENT',
+        color: 'white',
+        bgColor: 'bg-white',
+        borderColor: 'border-white',
+        shadowColor: 'shadow-white',
+        transform: 'rotate-[-4deg] translate-y-8 hover:rotate-0 hover:translate-y-0',
+        delay: 0.2,
     },
     {
-        icon: <Crosshair size={32} />,
-        title: 'Turf Wars & Gangs',
-        description: 'Fight for control over territories. Custom graffiti, drug manufacturing, and black market weapons.',
-        color: 'text-white/70',
+        icon: <Car strokeWidth={1.5} className="w-16 h-16 text-orange-500" />,
+        title: 'Tuning Scene',
+        description: 'Over 500+ custom import vehicles with advanced, realistic handling.',
+        label: 'MOTORSPORTS',
+        color: 'orange-500',
+        bgColor: 'bg-orange-500',
+        borderColor: 'border-orange-500',
+        shadowColor: 'shadow-orange-500',
+        transform: 'rotate-[2deg] -translate-y-2 hover:rotate-0 hover:translate-y-0',
+        delay: 0.3,
+    },
+    {
+        icon: <Crosshair strokeWidth={1.5} className="w-16 h-16 text-purple-500" />,
+        title: 'Turf Wars',
+        description: 'Fight for control over territories and manage black market weapons.',
+        label: 'CRIMINAL',
+        color: 'purple-500',
+        bgColor: 'bg-purple-500',
+        borderColor: 'border-purple-500',
+        shadowColor: 'shadow-purple-500',
+        transform: 'rotate-[-3deg] translate-y-6 hover:rotate-0 hover:translate-y-0',
+        delay: 0.4,
+    },
+    {
+        icon: <Users strokeWidth={1.5} className="w-16 h-16 text-zinc-400" />,
+        title: 'Community First',
+        description: 'A dedicated, hand-picked player base focused on story-driven interactions.',
+        label: 'CULTURE',
+        color: 'zinc-400',
+        bgColor: 'bg-zinc-500',
+        borderColor: 'border-zinc-500',
+        shadowColor: 'shadow-zinc-500',
+        transform: 'rotate-[4deg] -translate-y-8 hover:rotate-0 hover:translate-y-0',
+        delay: 0.5,
     }
 ];
 
 export function CustomMapsSection() {
     return (
-        <section className="relative py-24 px-6 max-w-7xl mx-auto z-10 w-full">
-            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-3xl h-[1px] bg-gradient-to-r from-transparent via-white/20 to-transparent" />
+        <section className="relative py-32 px-6 max-w-[1600px] mx-auto z-10 w-full mb-32 overflow-hidden">
 
-            <div className="text-center mb-16">
+            {/* Background glow effects */}
+            <div className="absolute top-1/2 left-1/4 w-96 h-96 bg-neon-cyan/10 rounded-full blur-[120px] -translate-y-1/2 pointer-events-none" />
+            <div className="absolute top-1/2 right-1/4 w-96 h-96 bg-maverick-red/10 rounded-full blur-[120px] -translate-y-1/2 pointer-events-none" />
+
+            <div className="text-center mb-32 relative z-10">
                 <motion.h2
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
+                    initial={{ opacity: 0, scale: 0.9 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
                     viewport={{ once: true }}
-                    className="text-4xl md:text-5xl font-black uppercase tracking-tighter mb-4"
+                    transition={{ duration: 0.8, ease: "easeOut" }}
+                    className="text-6xl md:text-8xl lg:text-[9rem] font-black uppercase tracking-tighter leading-none text-transparent"
+                    style={{ WebkitTextStroke: '2px rgba(255,255,255,0.1)' }}
                 >
-                    High-Stakes <span className="text-transparent bg-clip-text bg-gradient-to-r from-maverick-red to-orange-600">Features</span>
+                    EXPERIENCE
                 </motion.h2>
-                <motion.p
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: 0.1 }}
-                    className="text-white/60 max-w-2xl mx-auto text-lg"
-                >
-                    Welcome to Los Santos like you've never seen it before. Maverick RP redefines serious roleplay with custom systems and unparalleled performance.
-                </motion.p>
+
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {/* Scattered "Polaroid" / Glass Card Layout */}
+            <div className="flex flex-wrap justify-center gap-10 md:gap-16 relative z-20 p-4">
                 {features.map((feature, idx) => (
                     <motion.div
                         key={idx}
-                        initial={{ opacity: 0, y: 30 }}
+                        initial={{ opacity: 0, y: 100, rotate: 0 }}
                         whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ delay: idx * 0.1 + 0.2 }}
-                        className="glass-panel p-6 rounded-2xl hover:-translate-y-2 transition-transform duration-300 group"
+                        viewport={{ once: true, margin: "-100px" }}
+                        transition={{
+                            delay: feature.delay,
+                            type: "spring",
+                            stiffness: 100,
+                            damping: 20,
+                            mass: 1
+                        }}
+                        // Apply the custom scatter transform on load, reset to 0 on hover
+                        className={`w-[320px] h-[400px] sm:w-[350px] shrink-0 relative group transition-all duration-500 hover:z-50 ${feature.transform}`}
                     >
-                        <div className={`mb-6 p-4 rounded-xl bg-white/5 inline-block ${feature.color} group-hover:scale-110 transition-transform`}>
-                            {feature.icon}
+                        {/* Dark glass backdrop card */}
+                        <div className={`absolute inset-0 bg-black/60 backdrop-blur-2xl border border-white/10 rounded-3xl overflow-hidden transition-all duration-500 group-hover:bg-black/90 group-hover:border-${feature.color}/30 shadow-2xl`} style={{ transformStyle: 'preserve-3d', perspective: '1000px' }}>
+
+                            {/* Internal glowing orb */}
+                            <div className={`absolute -bottom-20 -right-20 w-64 h-64 rounded-full blur-[80px] opacity-0 group-hover:opacity-30 transition-opacity duration-700 ${feature.bgColor}`} />
+
+                            <div className="absolute inset-0 p-8 flex flex-col items-center justify-center text-center">
+                                {/* Empty cards per user request */}
+                            </div>
+
                         </div>
-                        <h3 className="text-xl font-bold mb-3 uppercase tracking-wide">{feature.title}</h3>
-                        <p className="text-white/50 leading-relaxed text-sm">
-                            {feature.description}
-                        </p>
                     </motion.div>
                 ))}
             </div>
