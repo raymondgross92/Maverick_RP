@@ -1,29 +1,21 @@
 import { Suspense } from 'react';
-import { Hero3D } from '@/components/3d/Hero3D';
-import { ServerStatusBadge } from '@/components/ServerStatusBadge';
 import { CustomMapsSection } from '@/components/CustomMapsSection';
+import { IntroSequence } from '@/components/IntroSequence';
 
 export default function Home() {
   return (
     <main className="min-h-screen relative flex flex-col bg-black overflow-hidden selection:bg-maverick-red selection:text-white">
-      {/* 3D Background */}
-      <Hero3D />
+      <IntroSequence />
+
 
       <div className="relative z-10 flex flex-col min-h-screen">
         {/* Hero Section Content */}
-        <section className="flex-grow flex flex-col justify-center items-center text-center px-6 relative mt-32 md:mt-20 lg:mt-0">
+        <section className="flex-grow flex flex-col items-center px-6 relative pt-[40vh]">
           {/* Subtle gradient overlay to make text pop against 3D */}
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_0%,#0a0a0a_80%)] pointer-events-none" />
 
           <div className="relative z-10 max-w-4xl mx-auto flex flex-col items-center">
-
-
-
-            <div className="mt-20 w-fit">
-              <Suspense fallback={<div className="h-20 w-80 glass-panel rounded-2xl animate-pulse" />}>
-                <ServerStatusBadge />
-              </Suspense>
-            </div>
+            {/* The Status Badge has been moved to the Navigation Header */}
           </div>
         </section>
 

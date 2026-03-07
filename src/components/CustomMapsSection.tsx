@@ -1,14 +1,21 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Map, Landmark, Shield, Crosshair, Users, Car } from 'lucide-react';
+import { Gamepad2, Briefcase, ShieldAlert, Flame, Crosshair, Users } from 'lucide-react';
 
 const features = [
     {
-        icon: <Map strokeWidth={1.5} className="w-16 h-16 text-neon-cyan" />,
-        title: 'Custom Worlds',
-        description: 'Immersive YMAPs & perfectly optimized MLOs integrated into the city.',
-        label: 'MAPPING',
+        icon: <Gamepad2 strokeWidth={1.5} className="w-16 h-16 text-neon-cyan" />,
+        title: 'Server Beitreten',
+        description: (
+            <>
+                1. Discord verbinden<br />
+                2. Salty Chat installieren<br />
+                3. TS3 verbinden<br />
+                4. Server beitreten
+            </>
+        ),
+        label: 'TUTORIAL',
         color: 'neon-cyan',
         bgColor: 'bg-neon-cyan',
         borderColor: 'border-neon-cyan',
@@ -18,7 +25,7 @@ const features = [
         delay: 0,
     },
     {
-        icon: <Landmark strokeWidth={1.5} className="w-16 h-16 text-maverick-red" />,
+        icon: <Briefcase strokeWidth={1.5} className="w-16 h-16 text-maverick-red" />,
         title: 'Dynamic Economy',
         description: 'Player-driven market, crypto-trading, and deep business management.',
         label: 'FINANCE',
@@ -30,7 +37,7 @@ const features = [
         delay: 0.1,
     },
     {
-        icon: <Shield strokeWidth={1.5} className="w-16 h-16 text-white" />,
+        icon: <ShieldAlert strokeWidth={1.5} className="w-16 h-16 text-white" />,
         title: 'LSPD & DOJ',
         description: 'Highly immersive justice system and a serious RP police force.',
         label: 'GOVERNMENT',
@@ -42,7 +49,7 @@ const features = [
         delay: 0.2,
     },
     {
-        icon: <Car strokeWidth={1.5} className="w-16 h-16 text-orange-500" />,
+        icon: <Flame strokeWidth={1.5} className="w-16 h-16 text-orange-500" />,
         title: 'Tuning Scene',
         description: 'Over 500+ custom import vehicles with advanced, realistic handling.',
         label: 'MOTORSPORTS',
@@ -87,20 +94,6 @@ export function CustomMapsSection() {
             <div className="absolute top-1/2 left-1/4 w-96 h-96 bg-neon-cyan/10 rounded-full blur-[120px] -translate-y-1/2 pointer-events-none" />
             <div className="absolute top-1/2 right-1/4 w-96 h-96 bg-maverick-red/10 rounded-full blur-[120px] -translate-y-1/2 pointer-events-none" />
 
-            <div className="text-center mb-32 relative z-10">
-                <motion.h2
-                    initial={{ opacity: 0, scale: 0.9 }}
-                    whileInView={{ opacity: 1, scale: 1 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.8, ease: "easeOut" }}
-                    className="text-6xl md:text-8xl lg:text-[9rem] font-black uppercase tracking-tighter leading-none text-transparent"
-                    style={{ WebkitTextStroke: '2px rgba(255,255,255,0.1)' }}
-                >
-                    EXPERIENCE
-                </motion.h2>
-
-            </div>
-
             {/* Scattered "Polaroid" / Glass Card Layout */}
             <div className="flex flex-wrap justify-center gap-10 md:gap-16 relative z-20 p-4">
                 {features.map((feature, idx) => (
@@ -126,7 +119,15 @@ export function CustomMapsSection() {
                             <div className={`absolute -bottom-20 -right-20 w-64 h-64 rounded-full blur-[80px] opacity-0 group-hover:opacity-30 transition-opacity duration-700 ${feature.bgColor}`} />
 
                             <div className="absolute inset-0 p-8 flex flex-col items-center justify-center text-center">
-                                {/* Empty cards per user request */}
+                                <div className={`mb-6 p-4 rounded-2xl bg-white/5 border border-white/5 shadow-inner`}>
+                                    {feature.icon}
+                                </div>
+                                <h3 className="text-xl sm:text-2xl font-black text-white mb-2 uppercase tracking-wide">
+                                    {feature.title}
+                                </h3>
+                                <p className="text-sm text-white/60 leading-relaxed max-w-[250px] mx-auto">
+                                    {feature.description}
+                                </p>
                             </div>
 
                         </div>
