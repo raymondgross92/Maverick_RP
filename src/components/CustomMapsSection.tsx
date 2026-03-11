@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Gamepad2, Briefcase, ShieldAlert, Flame, Crosshair, Users } from 'lucide-react';
+import { Gamepad2, Briefcase, ShieldAlert, Flame, Crosshair, Users, ClipboardList, Scale, Headset, Banknote, Dices } from 'lucide-react';
 
 const features = [
     {
@@ -25,10 +25,10 @@ const features = [
         delay: 0,
     },
     {
-        icon: <Briefcase strokeWidth={1.5} className="w-16 h-16 text-maverick-red" />,
-        title: 'Dynamic Economy',
-        description: 'Player-driven market, crypto-trading, and deep business management.',
-        label: 'FINANCE',
+        icon: <ClipboardList strokeWidth={1.5} className="w-16 h-16 text-maverick-red" />,
+        title: 'Patchnotes',
+        description: 'Alle Neuigkeiten, Änderungen und Updates auf einen Blick.',
+        label: 'UPDATES',
         color: 'maverick-red',
         bgColor: 'bg-maverick-red',
         borderColor: 'border-maverick-red',
@@ -37,10 +37,10 @@ const features = [
         delay: 0.1,
     },
     {
-        icon: <ShieldAlert strokeWidth={1.5} className="w-16 h-16 text-white" />,
-        title: 'LSPD & DOJ',
-        description: 'Highly immersive justice system and a serious RP police force.',
-        label: 'GOVERNMENT',
+        icon: <Briefcase strokeWidth={1.5} className="w-16 h-16 text-white" />,
+        title: 'Fraktionen & Jobs',
+        description: 'Bewirb dich als Medic, Polizist, Mechaniker oder gründe dein eigenes Unternehmen und forme die Wirtschaft.',
+        label: 'KARRIERE',
         color: 'white',
         bgColor: 'bg-white',
         borderColor: 'border-white',
@@ -49,10 +49,10 @@ const features = [
         delay: 0.2,
     },
     {
-        icon: <Flame strokeWidth={1.5} className="w-16 h-16 text-orange-500" />,
-        title: 'Tuning Scene',
-        description: 'Over 500+ custom import vehicles with advanced, realistic handling.',
-        label: 'MOTORSPORTS',
+        icon: <Banknote strokeWidth={1.5} className="w-16 h-16 text-orange-500" />,
+        title: 'Wirtschaft & Drogen',
+        description: 'Verdiene dein Geld mit legalen Berufen oder tauche in die Unterwelt ab, koche Drogen und verteidige dein Revier.',
+        label: 'ECONOMY',
         color: 'orange-500',
         bgColor: 'bg-orange-500',
         borderColor: 'border-orange-500',
@@ -61,10 +61,10 @@ const features = [
         delay: 0.3,
     },
     {
-        icon: <Crosshair strokeWidth={1.5} className="w-16 h-16 text-purple-500" />,
-        title: 'Turf Wars',
-        description: 'Fight for control over territories and manage black market weapons.',
-        label: 'CRIMINAL',
+        icon: <Headset strokeWidth={1.5} className="w-16 h-16 text-purple-500" />,
+        title: 'Support & Community',
+        description: 'Du brauchst Hilfe oder hast Fragen? Tritt unserem Discord bei oder öffne ein Ticket für schnellen Support.',
+        label: 'HILFE',
         color: 'purple-500',
         bgColor: 'bg-purple-500',
         borderColor: 'border-purple-500',
@@ -73,10 +73,10 @@ const features = [
         delay: 0.4,
     },
     {
-        icon: <Users strokeWidth={1.5} className="w-16 h-16 text-zinc-400" />,
-        title: 'Community First',
-        description: 'A dedicated, hand-picked player base focused on story-driven interactions.',
-        label: 'CULTURE',
+        icon: <Dices strokeWidth={1.5} className="w-16 h-16 text-zinc-400" />,
+        title: 'Events & Freizeit',
+        description: 'Nach Feierabend ins Casino, Paintball spielen oder an illegalen Straßenrennen teilnehmen – es wird nie langweilig.',
+        label: 'LIFESTYLE',
         color: 'zinc-400',
         bgColor: 'bg-zinc-500',
         borderColor: 'border-zinc-500',

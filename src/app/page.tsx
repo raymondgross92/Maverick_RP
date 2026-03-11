@@ -2,6 +2,8 @@ import { Suspense } from 'react';
 import { CustomMapsSection } from '@/components/CustomMapsSection';
 import { IntroSequence } from '@/components/IntroSequence';
 
+import Image from 'next/image';
+
 export default function Home() {
   return (
     <main className="min-h-screen relative flex flex-col bg-black overflow-hidden selection:bg-maverick-red selection:text-white">
@@ -31,6 +33,21 @@ export default function Home() {
               <a href="/impressum" className="hover:text-white transition-colors">Impressum</a>
               <a href="/datenschutz" className="hover:text-white transition-colors">Datenschutz</a>
             </div>
+          </div>
+
+          {/* Absolute positioned Partner Logo in bottom right */}
+          <div className="absolute right-6 bottom-6 sm:right-10 sm:bottom-8 flex items-center justify-end gap-3 pointer-events-auto z-20">
+            <span className="text-white/30 text-[9px] sm:text-[10px] uppercase tracking-[0.2em] font-bold text-right hidden sm:block">
+              Proudly<br/>Hosted By
+            </span>
+            <span className="text-white/30 text-[9px] uppercase tracking-[0.2em] font-bold sm:hidden">
+              Hosted By
+            </span>
+            <div className="w-[1px] h-8 bg-white/10 hidden sm:block mx-1"></div>
+            <a href="https://www.hosttech.ch/" target="_blank" rel="noopener noreferrer" className="opacity-70 hover:opacity-100 transition-all duration-300 block hover:scale-105">
+              <span className="sr-only">Partner: Hosttech</span>
+              <Image src="/Hosttech_logo.png" alt="Hosttech Logo" width={250} height={80} className="h-12 sm:h-16 w-auto object-contain drop-shadow-[0_0_15px_rgba(255,255,255,0.1)]" />
+            </a>
           </div>
         </footer>
       </div>
