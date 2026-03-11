@@ -4,13 +4,13 @@ export default function Regeln() {
     return (
         <main className="min-h-screen bg-black text-white p-6 md:p-12 lg:p-24 pt-32 lg:pt-40 selection:bg-maverick-red selection:text-white">
             <div className="max-w-[1400px] mx-auto relative">
-                <Link href="/" className="text-maverick-red hover:text-white transition-colors uppercase tracking-widest text-sm font-bold mb-12 inline-block">
+                <a href="/" className="text-maverick-red hover:text-white transition-colors uppercase tracking-widest text-sm font-bold mb-12 inline-block">
                     &larr; Zurück zur Startseite
-                </Link>
+                </a>
 
                 <div className="mb-16 pb-8 border-b border-white/10">
                     <p className="text-maverick-red font-mono text-sm tracking-[0.2em] uppercase mb-4">
-            // Protocol: Server Guidelines //
+            
                     </p>
                     <h1 className="text-5xl md:text-7xl font-black uppercase tracking-tighter mb-4">
                         Maverick State <br />

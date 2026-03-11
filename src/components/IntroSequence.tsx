@@ -13,11 +13,10 @@ export function IntroSequence() {
     useEffect(() => {
         setIsMounted(true);
         const hasPlayed = sessionStorage.getItem('maverick_intro_played');
-        if (hasPlayed) {
+        if (hasPlayed === 'true') {
             setShowIntro(false);
+            setNeedsInteraction(false);
         }
-        // If not played, we intentionally leave needsInteraction as true 
-        // to force the user to click the "Click to Enter" button first.
     }, []);
 
     const finishIntro = () => {

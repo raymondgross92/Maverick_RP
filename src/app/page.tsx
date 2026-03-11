@@ -7,7 +7,6 @@ export default function Home() {
     <main className="min-h-screen relative flex flex-col bg-black overflow-hidden selection:bg-maverick-red selection:text-white">
       <IntroSequence />
 
-
       <div className="relative z-10 flex flex-col min-h-screen">
         {/* Hero Section Content */}
         <section className="flex-grow flex flex-col items-center px-6 relative pt-[40vh]">
