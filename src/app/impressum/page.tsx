@@ -9,28 +9,26 @@ export default function Impressum() {
                         <h2 className="text-2xl font-bold text-white mb-4">Angaben gemäß § 5 TMG</h2>
                         <h3 className="text-xl font-semibold text-white/90 mb-2">Betreiber der Website</h3>
                         <p className="mb-4">
-                            [Name der Organisation / Vor- und Nachname]<br />
-                            [Straße und Hausnummer]<br />
-                            [Postleitzahl und Ort]<br />
-                            [Land, falls relevant]
+                            Marc Schwendener<br />
+                            Seestrasse 17B<br />
+                            8805 Richterswil<br />
+                            Schweiz
                         </p>
                     </section>
 
                     <section>
                         <h2 className="text-2xl font-bold text-white mb-4">Kontakt</h2>
                         <p className="mb-4">
-                            Telefon: [Deine Telefonnummer, optional]<br />
-                            E-Mail: [Deine E-Mail-Adresse]<br />
-                            Discord: [Link zum Discord-Server, optional]
+                            E-Mail: kontakt@maverick-state.com
                         </p>
                     </section>
 
                     <section>
                         <h2 className="text-2xl font-bold text-white mb-4">Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV</h2>
                         <p className="mb-4">
-                            [Vor- und Nachname des inhaltlich Verantwortlichen]<br />
-                            [Straße und Hausnummer]<br />
-                            [Postleitzahl und Ort]
+                            Marc Schwendener<br />
+                            Seestrasse 17B<br />
+                            8805 Richterswil
                         </p>
                     </section>
 
